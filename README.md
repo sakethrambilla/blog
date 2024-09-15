@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Blog Application
 
-## Getting Started
+## Features
 
-First, run the development server:
+- [x] User Authentication
+- [ ] Content Management System
+- [ ] Advanced Search & filtering
+- [ ] Media Management System
+- [ ] Content Scheduling & Publishing
+- [ ] User Profiles and Activity Feed
+- [ ] Commenting System
+- [ ] Bookmarking
+- [ ] Personalized Content Recommendations
+- [ ] Analytics Dashboard
+- [ ] Tagging & categorization System
+- [ ] Dark Mode Support
+- [ ] Email Notifications.
+- [ ] SEO Optimization
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech Stack
+
+![Medium](https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white)
+![Medium](https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black)
+![Medium](https://img.shields.io/badge/Next.js-000000.svg?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Medium](https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white)
+![Medium](https://img.shields.io/badge/shadcn/ui-000000.svg?style=for-the-badge&logo=shadcn/ui&logoColor=white)
+![Medium](https://img.shields.io/badge/Prisma-2D3748.svg?style=for-the-badge&logo=Prisma&logoColor=white)
+![Medium](https://img.shields.io/badge/PostgreSQL-4169E1.svg?style=for-the-badge&logo=PostgreSQL&logoColor=white)
+![Medium](https://img.shields.io/badge/Vercel-000000.svg?style=for-the-badge&logo=Vercel&logoColor=white)
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+DATABASE_URL=""
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Run Locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Clone the project
 
-## Learn More
+```bash
+  git clone  https://github.com/sakethrambilla/blog.git
+```
 
-To learn more about Next.js, take a look at the following resources:
+Go to the project directory
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  cd blog
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Install dependencies
 
-## Deploy on Vercel
+```bash
+  npm install
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Start the server
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+  npm run dev
+```
+
+## Deployment
+
+Project is deployed at:
+
+## Screenshots
+
+<img title="a title" alt="Alt text" src="public/sample-images/1.png">
+<img title="a title" alt="Alt text" src="public/sample-images/2.png">
+<img title="a title" alt="Alt text" src="public/sample-images/3.png">
+<img title="a title" alt="Alt text" src="public/sample-images/4.png">
+<img title="a title" alt="Alt text" src="public/sample-images/5.png">
