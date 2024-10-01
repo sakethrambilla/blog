@@ -4,12 +4,28 @@ const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./_components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./_layout/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./layout/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            "--tw-prose-counters": "#fff",
+            // "--tw-prose-pre-bg": "#d9f19d",
+
+            maxWidth: "100vw",
+            li: {
+              p: {
+                margin: 0,
+              },
+            },
+            code: {},
+          },
+        },
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -52,13 +68,8 @@ const config: Config = {
           "5": "hsl(var(--chart-5))",
         },
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 };
 export default config;

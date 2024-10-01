@@ -60,3 +60,25 @@ model VerificationToken {
   @@id([identifier, token])
 }
  
+
+model DsaProblem{
+  id String @id @default(uuid())
+  title String 
+  slug String @unique
+  link String 
+  content String
+  difficulty_level String
+  publish Boolean
+  category DsaProblemCategory[]
+}
+
+model DsaProblemCategory{
+  id String @id @default(uuid())
+  category String
+  category_slug String @unique
+  problems DsaProblem[]
+}
+
+
+
+

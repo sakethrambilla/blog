@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import SessionWrapper from "@/_components/ui/session-wrapper";
-import { ThemeProvider } from "@/_components/ui/theme-provider";
+import SessionWrapper from "@/components/session-wrapper";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/toaster";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
             // disableTransitionOnChange
           >
             {children}
+            <Toaster />
           </ThemeProvider>
         </SessionWrapper>
       </body>
