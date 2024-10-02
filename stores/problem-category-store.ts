@@ -1,13 +1,13 @@
-import { getAllCategories } from "@/actions/dsa-problem";
-import { DsaProblemCategory } from "@/types/dsa-problem.type";
+import { getAllCategories } from "@/actions/problem";
+import { ProblemCategory } from "@/types/problem.type";
 import { makeAutoObservable } from "mobx";
 
-type ProblemCategory = Omit<DsaProblemCategory, "problems"> & {
+type ProblemCategoryType = Omit<ProblemCategory, "problems"> & {
   selected: boolean;
 };
 
 class ProblemCategoryStore {
-  problemCategory: ProblemCategory[] = [];
+  problemCategory: ProblemCategoryType[] = [];
   newCategory: string = "";
 
   constructor() {

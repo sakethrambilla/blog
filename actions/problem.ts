@@ -1,26 +1,26 @@
 "use server";
 
 import prisma from "@/lib/db";
-import { DsaProblem, DsaProblemCategory } from "@/types/dsa-problem.type";
+import { Problem, ProblemCategory } from "@/types/problem.type";
 import { connect } from "http2";
 
-type CreateDsaProblemCategory = Omit<DsaProblemCategory, "id" | "problems">;
+type CreateProblemCategory = Omit<ProblemCategory, "id" | "problems">;
 
 export async function getAllCategories() {
-  const response = await prisma.dsaProblemCategory.findMany();
+  const response = await prisma.problemCategory.findMany();
   return response;
 }
 
-export async function addCategories(data: CreateDsaProblemCategory[]) {
-  const response = await prisma.dsaProblemCategory.createMany({ data: data });
+export async function addCategories(data: CreateProblemCategory[]) {
+  const response = await prisma.problemCategory.createMany({ data: data });
   return response;
 }
 
-export async function addNeProblem(data: Omit<DsaProblem, "id">) {
+export async function addNeProblem(data: Omit<Problem, "id">) {
   const { title, slug, link, content, difficulty_level, publish, category } =
     data;
   try {
-    const response = await prisma.dsaProblem.create({
+    const response = await prisma.problem.create({
       data: {
         title,
         slug,
@@ -29,7 +29,7 @@ export async function addNeProblem(data: Omit<DsaProblem, "id">) {
         content,
         publish,
         category: {
-          connect: category.map((slug) => ({ category_slug: slug })),
+          connect: category.map((slug: string) => ({ slug: slug })),
         },
       },
     });

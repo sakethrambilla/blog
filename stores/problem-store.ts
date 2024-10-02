@@ -1,7 +1,7 @@
-import { DsaProblem } from "@/types/dsa-problem.type";
+import { Problem } from "@/types/problem.type";
 
-type Problem = Omit<DsaProblem, "id">;
-const initalProblem: Problem = {
+type ProblemType = Omit<Problem, "id">;
+const initalProblem: ProblemType = {
   title: "",
   slug: "",
   link: "",
@@ -12,7 +12,7 @@ const initalProblem: Problem = {
 };
 
 class ProblemStore {
-  problem: Problem = initalProblem;
+  problem: ProblemType = initalProblem;
 }
 
 const problemStore = new ProblemStore();

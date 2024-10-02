@@ -1,4 +1,4 @@
-export type DsaProblem = {
+export type Problem = {
   id: string;
   title: string;
   slug: string;
@@ -8,9 +8,9 @@ export type DsaProblem = {
   publish: boolean;
   category: string[];
 };
-export type DsaProblemCategory = {
+export type ProblemCategory = {
   id: string;
-  category: string;
-  category_slug: string;
+  name: string;
+  slug: string;
   problems: string[];
 };

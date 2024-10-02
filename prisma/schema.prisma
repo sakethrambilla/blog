@@ -61,7 +61,7 @@ model VerificationToken {
 }
  
 
-model DsaProblem{
+model Problem{
   id String @id @default(uuid())
   title String 
   slug String @unique
@@ -69,14 +69,14 @@ model DsaProblem{
   content String
   difficulty_level String
   publish Boolean
-  category DsaProblemCategory[]
+  category ProblemCategory[]
 }
 
-model DsaProblemCategory{
+model ProblemCategory{
   id String @id @default(uuid())
-  category String
-  category_slug String @unique
-  problems DsaProblem[]
+  name String
+  slug String @unique
+  problems Problem[]
 }
 
 

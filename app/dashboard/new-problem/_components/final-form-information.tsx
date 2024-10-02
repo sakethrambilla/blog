@@ -6,7 +6,7 @@ import { Switch } from "@/components/ui/switch";
 import { useEditor } from "@tiptap/react";
 import dynamic from "next/dynamic";
 import { UseFormReturn } from "react-hook-form";
-import { FormSchemaType } from "./dsa-details-form";
+import { FormSchemaType } from "./problem-details-form";
 const TextEditor = dynamic(() => import("@/components/text-editor"), {
   ssr: false,
 });

@@ -9,10 +9,9 @@ import { toJS } from "mobx";
 import InitialFormInformation from "./intial-form-information";
 import { useToast } from "@/hooks/use-toast";
 import FinalFormInformation from "./final-form-information";
-import { addNeProblem } from "@/actions/dsa-problem";
+import { addNeProblem } from "@/actions/problem";
 import problemStore from "@/stores/problem-store";
-import { redirect, useRouter } from "next/navigation";
-import { Router } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 // Form schema validation using zod
 const formSchema = z.object({
@@ -32,7 +31,7 @@ const formSchema = z.object({
 export type FormSchemaType = z.infer<typeof formSchema>;
 
 // Component : DSADetailsForm
-export default function DSADetailsForm() {
+export default function ProblemDetailsForm() {
   const { toast } = useToast();
   const [step, setStep] = useState<number>(1);
   const category = problemStore.problem.category;

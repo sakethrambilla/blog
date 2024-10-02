@@ -2,7 +2,7 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { UseFormReturn } from "react-hook-form";
-import { FormSchemaType } from "./dsa-details-form";
+import { FormSchemaType } from "./problem-details-form";
 import problemStore from "@/stores/problem-store";
 import { Button } from "@/components/ui/button";
 import { slugify } from "@/lib/sluggify";
@@ -150,7 +150,7 @@ const ProblemCategory: FC = observer(() => {
             )}
             onClick={() => problemCategorystore.toggleSelection(category.id)}
           >
-            {category.category}
+            {category.name}
           </div>
         ))}
       </div>
