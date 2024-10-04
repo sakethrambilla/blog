@@ -15,7 +15,7 @@ function page() {
           <AddCard title="Add a new post" redirectUrl="/dashboard/new-post" />
           <AddCard
             title="Add a new DSA problem"
-            redirectUrl="/dashboard/new-dsa-problem"
+            redirectUrl="/dashboard/new-problem"
           />
         </div>
       </div>

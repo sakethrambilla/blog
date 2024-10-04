@@ -40,6 +40,7 @@ export default function ProblemDetailsForm() {
   // Initialize React Hook Form with Zod
   const formMethods = useForm<FormSchemaType>({
     resolver: zodResolver(formSchema),
+    defaultValues: { publish: false },
     // defaultValues: problemStore.problem,
   });
 

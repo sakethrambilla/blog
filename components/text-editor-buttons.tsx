@@ -39,6 +39,7 @@ const TextEditorButtons = ({ editor }: { editor: Editor }) => {
     <div className="flex flex-wrap items-center gap-2">
       <Heading editor={editor} />
       <button
+        type="button"
         onClick={() => editor.chain().focus().toggleBold().run()}
         disabled={!editor.can().chain().focus().toggleBold().run()}
         className={cn(
@@ -49,6 +50,7 @@ const TextEditorButtons = ({ editor }: { editor: Editor }) => {
         <Bold />
       </button>
       <button
+        type="button"
         onClick={() => editor.chain().focus().toggleItalic().run()}
         disabled={!editor.can().chain().focus().toggleItalic().run()}
         className={cn(
@@ -59,6 +61,7 @@ const TextEditorButtons = ({ editor }: { editor: Editor }) => {
         <Italic />
       </button>
       <button
+        type="button"
         onClick={() => editor.chain().focus().toggleStrike().run()}
         disabled={!editor.can().chain().focus().toggleStrike().run()}
         className={cn(
@@ -69,6 +72,7 @@ const TextEditorButtons = ({ editor }: { editor: Editor }) => {
         <Strikethrough />
       </button>
       <button
+        type="button"
         onClick={() => editor.chain().focus().toggleCode().run()}
         disabled={!editor.can().chain().focus().toggleCode().run()}
         className={cn(
@@ -80,6 +84,7 @@ const TextEditorButtons = ({ editor }: { editor: Editor }) => {
       </button>
 
       <button
+        type="button"
         onClick={() => editor.chain().focus().toggleBulletList().run()}
         className={cn(
           editor.isActive("bulletList") ? "bg-secondary" : "",
@@ -89,6 +94,7 @@ const TextEditorButtons = ({ editor }: { editor: Editor }) => {
         <List />
       </button>
       <button
+        type="button"
         onClick={() => editor.chain().focus().toggleOrderedList().run()}
         className={cn(
           editor.isActive("orderedList") ? "bg-secondary" : "",
@@ -98,6 +104,7 @@ const TextEditorButtons = ({ editor }: { editor: Editor }) => {
         <ListOrdered />
       </button>
       <button
+        type="button"
         onClick={() => editor.chain().focus().toggleCodeBlock().run()}
         className={cn(
           editor.isActive("codeBlock") ? "bg-secondary" : "",
@@ -107,6 +114,7 @@ const TextEditorButtons = ({ editor }: { editor: Editor }) => {
         <SquareCode />
       </button>
       <button
+        type="button"
         onClick={() => editor.chain().focus().toggleBlockquote().run()}
         className={cn(
           editor.isActive("blockquote") ? "bg-secondary" : "",
@@ -116,6 +124,7 @@ const TextEditorButtons = ({ editor }: { editor: Editor }) => {
         <Quote />
       </button>
       <button
+        type="button"
         onClick={() => editor.chain().focus().toggleSuperscript().run()}
         className={cn(
           editor.isActive("superscript") ? "bg-secondary" : "",
@@ -125,35 +134,50 @@ const TextEditorButtons = ({ editor }: { editor: Editor }) => {
         <Superscript />
       </button>
       <button
+        type="button"
         onClick={() => editor.chain().focus().toggleSubscript().run()}
         className={editor.isActive("subscript") ? "is-active" : ""}
       >
         <Subscript />
       </button>
-      <button onClick={() => editor.chain().focus().setHorizontalRule().run()}>
+      <button
+        type="button"
+        onClick={() => editor.chain().focus().setHorizontalRule().run()}
+      >
         <Minus />
       </button>
       <ImageButton editor={editor} />
-      <button onClick={() => editor.chain().focus().setHardBreak().run()}>
+      <button
+        type="button"
+        onClick={() => editor.chain().focus().setHardBreak().run()}
+      >
         Hard break
       </button>
       <button
+        type="button"
         onClick={() => editor.chain().focus().undo().run()}
         disabled={!editor.can().chain().focus().undo().run()}
       >
         Undo
       </button>
       <button
+        type="button"
         onClick={() => editor.chain().focus().redo().run()}
         disabled={!editor.can().chain().focus().redo().run()}
       >
         Redo
       </button>
 
-      <button onClick={() => editor.chain().focus().unsetAllMarks().run()}>
+      <button
+        type="button"
+        onClick={() => editor.chain().focus().unsetAllMarks().run()}
+      >
         Clear marks
       </button>
-      <button onClick={() => editor.chain().focus().clearNodes().run()}>
+      <button
+        type="button"
+        onClick={() => editor.chain().focus().clearNodes().run()}
+      >
         Clear nodes
       </button>
     </div>
@@ -243,7 +267,9 @@ const ImageButton = ({ editor }: { editor: Editor }) => {
           placeholder="Enter your url"
           onChange={(e) => setUrl(e.target.value)}
         />
-        <Button onClick={addImage}>Add Image</Button>
+        <Button type="button" onClick={addImage}>
+          Add Image
+        </Button>
       </DialogContent>
     </Dialog>
   );

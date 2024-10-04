@@ -31,7 +31,7 @@ const FinalFormInformation = ({ formMethods }: FinalFormInformationProps) => {
     editorProps: {
       attributes: {
         class:
-          " prose lg:prose-lg prose-headings:text-gray-200 prose-h2:my-6 prose-h3:my-4 prose-p:m-0 prose-p:text-white prose-strong:text-gray-100 prose-li:text-gray-200 prose-img:w-full prose-img:rounded-xl prose-video:rounded-xl   rounded-b max-w-none border p-4 w-full h-[60vh] outline-none overflow-y-auto",
+          " prose lg:prose-lg prose-headings:text-primary prose-h2:my-6 prose-h3:my-4 prose-p:m-0 prose-p:text-foreground prose-strong:text-foreground prose-li:text-foreground prose-img:w-full prose-img:rounded-xl  prose-video:rounded-xl   rounded-lg max-w-none border p-4 w-full h-[60vh] outline-none overflow-y-auto  prose-hr:m-1",
       },
     },
   });

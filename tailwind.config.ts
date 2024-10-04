@@ -13,14 +13,19 @@ const config: Config = {
       typography: {
         DEFAULT: {
           css: {
-            "--tw-prose-counters": "#fff",
-            // "--tw-prose-pre-bg": "#d9f19d",
+            "--tw-prose-counters": "hsl(var(--foreground))",
+            "--tw-prose-code": "hsl(var(--secondary-foreground))",
+            "--tw-prose-pre-bg": "#2c2c2c",
 
             maxWidth: "100vw",
+
             li: {
               p: {
                 margin: 0,
               },
+            },
+            pre: {
+              margin: 0,
             },
             code: {},
           },

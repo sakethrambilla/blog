@@ -12,7 +12,7 @@ function MainNavbar() {
   return (
     <>
       {/* Desktop  */}
-      <div className="absolute top-0 hidden w-full items-center justify-between p-8 lg:flex">
+      <div className="absolute top-0 hidden w-full items-center justify-between bg-background p-8 lg:flex">
         <Link href={"/"} className="font-semibold">
           Blog
         </Link>

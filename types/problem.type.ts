@@ -14,3 +14,10 @@ export type ProblemCategory = {
   slug: string;
   problems: string[];
 };
+
+export type ProblemListType = {
+  title: string;
+  slug: string;
+  difficulty_level: string;
+  category: { slug: string; name: string }[];
+};

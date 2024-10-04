@@ -9,10 +9,7 @@
     "prepare": "husky",
     "lint": "next lint",
     "test": "echo \"Error: no test specified\" ",
-    "release": "standard-version",
-    "release:minor": "standard-version --release-as minor",
-    "release:patch": "standard-version --release-as patch",
-    "release:major": "standard-version --release-as major"
+    "release": "release-it"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.4.2",
@@ -68,7 +65,7 @@
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
     "prisma": "^5.19.1",
-    "standard-version": "^9.5.0",
+    "release-it": "^17.6.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   },

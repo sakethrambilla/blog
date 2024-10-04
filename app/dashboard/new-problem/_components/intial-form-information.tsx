@@ -18,6 +18,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import AddNewProblemCateogry from "./add-new-problem-category";
 
 // Props interface for InitialFormInformation
 interface InitialFormInformation {
@@ -50,7 +51,7 @@ const InitialFormInformation: FC<InitialFormInformation> = ({
   };
   console.log(watch("difficulty_level"));
   return (
-    <div className="flex flex-col gap-8 lg:gap-10">
+    <div className="flex w-full flex-col gap-8 lg:gap-10">
       <div className="flex w-full items-center justify-start gap-4">
         {/* Title */}
         <div className="flex w-2/3 flex-col items-start gap-2">
@@ -136,9 +137,7 @@ const ProblemCategory: FC = observer(() => {
     <div className="flex w-full flex-col gap-4 lg:w-1/2">
       <div className="flex w-full items-center justify-between gap-4">
         <h3 className="text-xl"> Category</h3>
-        <Button variant={"ghost"} size={"sm"}>
-          Add new category
-        </Button>
+        <AddNewProblemCateogry />
       </div>
       <div className="flex flex-wrap gap-4">
         {problemCategorystore.problemCategory.map((category) => (
